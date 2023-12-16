@@ -75,54 +75,54 @@ public void mostrarMenu() {
      */
     private void crearEscuderia() 
     {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese el nombre de la escudería: ");
-        String nombre = scanner.nextLine();
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Ingrese el nombre de la escudería: ");
+            String nombre = scanner.nextLine();
 
-        Escuderia escuderia = new Escuderia(nombre);
+            Escuderia escuderia = new Escuderia(nombre);
 
-        // Agregar pilotos
-        System.out.print("¿Cuántos pilotos quieres agregar? ");
-        int numPilotos = scanner.nextInt();
-        for (int i = 0; i < numPilotos; i++) {
-            System.out.print("Nombre del piloto " + (i + 1) + ": ");
-            String nombrePiloto = scanner.next();
-            System.out.print("Edad del piloto " + (i + 1) + ": ");
-            int edadPiloto = scanner.nextInt();
-            escuderia.agregarPiloto(new Piloto(nombrePiloto, edadPiloto));
+            // Agregar pilotos
+            System.out.print("¿Cuántos pilotos quieres agregar? ");
+            int numPilotos = scanner.nextInt();
+            for (int i = 0; i < numPilotos; i++) {
+                System.out.print("Nombre del piloto " + (i + 1) + ": ");
+                String nombrePiloto = scanner.next();
+                System.out.print("Edad del piloto " + (i + 1) + ": ");
+                int edadPiloto = scanner.nextInt();
+                escuderia.agregarPiloto(new Piloto(nombrePiloto, edadPiloto));
+            }
+
+            // Agregar coches
+            System.out.print("¿Cuántos coches quieres agregar? ");
+            int numCoches = scanner.nextInt();
+            for (int i = 0; i < numCoches; i++) {
+                System.out.print("Modelo del coche " + (i + 1) + ": ");
+                String modeloCoche = scanner.next();
+                System.out.print("Color del coche " + (i + 1) + ": ");
+                String colorCoche = scanner.next();
+                escuderia.agregarCoche(new Coche(modeloCoche, colorCoche));
+            }
+
+            // Agregar motores
+            System.out.print("¿Cuántos motores quieres agregar? ");
+            int numMotores = scanner.nextInt();
+            for (int i = 0; i < numMotores; i++) {
+                System.out.print("Fabricante del motor " + (i + 1) + ": ");
+                String fabricanteMotor = scanner.next();
+                escuderia.agregarMotor(new Motor(fabricanteMotor));
+            }
+
+            // Agregar neumáticos
+            System.out.print("¿Cuántos neumáticos quieres agregar? ");
+            int numNeumaticos = scanner.nextInt();
+            for (int i = 0; i < numNeumaticos; i++) {
+                System.out.print("Tipo de neumático " + (i + 1) + ": ");
+                String tipoNeumatico = scanner.next();
+                escuderia.agregarNeumatico(new Neumaticos(tipoNeumatico, nombre));
+            }
+
+            escuderias.add(escuderia);
         }
-
-        // Agregar coches
-        System.out.print("¿Cuántos coches quieres agregar? ");
-        int numCoches = scanner.nextInt();
-        for (int i = 0; i < numCoches; i++) {
-            System.out.print("Modelo del coche " + (i + 1) + ": ");
-            String modeloCoche = scanner.next();
-            System.out.print("Color del coche " + (i + 1) + ": ");
-            String colorCoche = scanner.next();
-            escuderia.agregarCoche(new Coche(modeloCoche, colorCoche));
-        }
-
-        // Agregar motores
-        System.out.print("¿Cuántos motores quieres agregar? ");
-        int numMotores = scanner.nextInt();
-        for (int i = 0; i < numMotores; i++) {
-            System.out.print("Fabricante del motor " + (i + 1) + ": ");
-            String fabricanteMotor = scanner.next();
-            escuderia.agregarMotor(new Motor(fabricanteMotor));
-        }
-
-        // Agregar neumáticos
-        System.out.print("¿Cuántos neumáticos quieres agregar? ");
-        int numNeumaticos = scanner.nextInt();
-        for (int i = 0; i < numNeumaticos; i++) {
-            System.out.print("Tipo de neumático " + (i + 1) + ": ");
-            String tipoNeumatico = scanner.next();
-            escuderia.agregarNeumatico(new Neumaticos(tipoNeumatico, nombre));
-        }
-
-        escuderias.add(escuderia);
-
         System.out.println("Escudería creada con éxito. ");
         
     }

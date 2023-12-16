@@ -1,44 +1,69 @@
-F1 Team Manager
-Descripción
-Bienvenido al F1 Team Manager, una aplicación simple de gestión de escuderías de Fórmula 1. Esta aplicación te permite crear y administrar escuderías, agregar pilotos, coches, motores y neumáticos, así como visualizar y eliminar escuderías. A continuación, encontrarás información importante para usuarios y desarrolladores.
+## Formula 1 Team Management System
 
-Para Usuarios
-Requisitos del Sistema
-Java Runtime Environment (JRE) instalado en tu máquina.
-Cómo Iniciar la Aplicación
-Descarga el archivo ejecutable F1TeamManager.jar desde la página de lanzamientos.
-Ejecuta el archivo F1TeamManager.jar haciendo doble clic.
-Sigue las instrucciones del menú para crear, visualizar y eliminar escuderías.
-Notas de Uso
-Crear Escudería: Puedes crear una nueva escudería ingresando información sobre pilotos, coches, motores y neumáticos.
-Mostrar Escuderías: Visualiza la información detallada de todas las escuderías registradas.
-Eliminar Escudería: Elimina una escudería ingresando su nombre.
-Guardar Datos
-Los datos se guardan automáticamente al cerrar la aplicación.
-Puedes reiniciar la aplicación y cargar datos previos al reiniciar.
-Para Desarrolladores
-Requisitos de Desarrollo
-Java Development Kit (JDK) 8 o superior.
-IDE compatible con Java (Eclipse, IntelliJ, etc.).
-Estructura del Proyecto
-El proyecto está dividido en paquetes (dominio, interfaz, main) para una organización clara.
-La lógica de dominio se encuentra en el paquete dominio.
-La interfaz de usuario y la gestión del menú están en el paquete interfaz.
-El punto de entrada principal está en la clase Main del paquete main.
-Archivos Importantes
-Menu.java: Clase que gestiona el menú y la interacción con el usuario.
-Escuderia.java, Coche.java, Piloto.java, Motor.java, Neumaticos.java: Clases que representan entidades del dominio.
-Main.java: Clase principal con el método main para iniciar la aplicación.
-F1TeamManager.jar: Archivo ejecutable para usuarios finales.
-Almacenamiento de Datos
-Los datos se almacenan en el archivo escuderias.dat utilizando serialización.
-Los datos se cargan al iniciar la aplicación y se guardan al cerrar.
-Contribuciones
-Siéntete libre de realizar mejoras y contribuciones al proyecto.
-Abre problemas (issues) para informar sobre errores o sugerir nuevas características.
-Construcción del Proyecto
-Abre el proyecto en tu IDE.
-Compila y ejecuta Main.java para iniciar la aplicación.
-Dependencias
-No hay dependencias externas, solo utiliza las clases estándar de Java.
-¡Disfruta gestionando tu propia escudería de Fórmula 1 con F1 Team Manager! Si tienes preguntas o encuentras problemas, no dudes en abrir un problema (issue) en este repositorio. ¡Gracias por usar nuestra aplicación! 🏎️🏁
+Este proyecto en Java ofrece una aplicación simple para gestionar equipos de Fórmula 1, brindando a los usuarios la capacidad de crear, visualizar y eliminar equipos. La aplicación cuenta con clases que representan un equipo de Fórmula 1 (`Escuderia`), un coche (`Coche`), un motor (`Motor`), neumáticos (`Neumaticos`), y un piloto (`Piloto`). La interacción con el usuario está implementada en la clase `Menu`, que proporciona un menú interactivo para realizar acciones específicas.
+
+### Estructura del Proyecto
+
+El proyecto se organiza en varias clases, cada una con su función específica:
+
+- **Coche (`dominio.Coche`):** Representa un coche de Fórmula 1 con modelo y color.
+
+- **Escuderia (`dominio.Escuderia`):** Representa un equipo de Fórmula 1 que incluye listas de pilotos, coches, motores y neumáticos.
+
+- **Motor (`dominio.Motor`):** Representa un motor de Fórmula 1 con un fabricante.
+
+- **Neumaticos (`dominio.Neumaticos`):** Representa los neumáticos de un equipo de Fórmula 1, heredando de la clase `Escuderia`.
+
+- **Piloto (`dominio.Piloto`):** Representa un piloto de Fórmula 1 con un nombre y una edad.
+
+- **Menu (`interfaz.Menu`):** Gestiona la interfaz de usuario y las interacciones del usuario, permitiendo la creación, visualización y eliminación de equipos. También se encarga de cargar y guardar datos.
+
+- **Main (`main.Main`):** Contiene el método `main` para iniciar la aplicación.
+
+- **Makefile:** Proporciona reglas para compilar, generar archivos JAR, crear documentación Javadoc, ejecutar la aplicación y limpiar el proyecto.
+
+### Uso del Makefile
+
+El proyecto utiliza un Makefile para automatizar tareas comunes. Algunos objetivos incluyen:
+
+- `make compilar`: Compila los archivos fuente de Java.
+- `make jar`: Crea un archivo JAR para la aplicación.
+- `make javadoc`: Genera la documentación Javadoc.
+- `make ejecutar`: Ejecuta la aplicación Java compilada.
+- `make limpiar`: Limpia el proyecto eliminando archivos compilados y archivos JAR.
+- `make debug`: Compila el código con información de depuración y ejecuta el depurador.
+- `make runjar`: Ejecuta la aplicación utilizando el archivo JAR generado.
+- `make completo`: Realiza una compilación completa, generación de Javadoc, creación de JAR y ejecución de la aplicación.
+
+Personaliza el Makefile según la estructura y requisitos de tu proyecto.
+
+### Instrucciones de Ejecución
+
+1. Clona o descarga el proyecto desde el repositorio.
+2. Abre una terminal y navega al directorio del proyecto.
+3. Ejecuta `make completo` para una compilación completa.
+4. Ejecuta `make runjar` para ejecutar la aplicación utilizando el archivo JAR generado.
+
+### UML
+
+Los diagramas UML que visualiza en este programa se generan automáticamente a partir de los archivos .java y no han sido revisados manualmente. Por lo tanto, tenga en cuenta lo siguiente:
+
+Los diagramas UML se generan con fines ilustrativos y pueden contener errores, omisiones o representaciones incompletas de la estructura y relaciones del sistema.
+
+La precisión de la información en los diagramas UML depende de la exactitud de los datos de entrada y la implementación del programa. Pueden producirse discrepancias entre la realidad y los diagramas generados.
+
+Se recomienda utilizar los diagramas UML como una referencia inicial y no como la única fuente de información sobre la arquitectura del sistema.
+
+Estos diagramas UML son proporcionados "tal cual" y no se garantiza su exactitud o idoneidad para ningún propósito específico. El uso de esta información está bajo su propia responsabilidad.
+
+¡Gracias por su comprensión y precaución al utilizar los diagramas UML generados automáticamente!
+
+### License
+
+Copyright 2023 Javiermartinez13
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

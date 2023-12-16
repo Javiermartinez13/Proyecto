@@ -1,0 +1,85 @@
+@startuml
+!theme blueprint
+class main.Main {
+  + main(args: String[]): void
+}
+class dominio.Coche {
+  - modelo: String
+  - color: String
+  + toString(): String
+}
+class dominio.Escuderia {
+  - nombre: String
+  - pilotos: List
+  - coches: List
+  - motores: List
+  - neumaticos: List
+  + getNombre(): String
+  + agregarPiloto(piloto: Piloto): void
+  + agregarCoche(coche: Coche): void
+  + agregarMotor(motor: Motor): void
+  + getPilotos(): List
+  + getCoches(): List
+  + getMotores(): List
+  + agregarNeumatico(neumatico: Neumaticos): void
+  + getNeumaticos(): List
+  + toString(): String
+}
+class dominio.Motor {
+  - fabricante: String
+  + toString(): String
+}
+class dominio.Neumaticos {
+  - tipo: String
+  + getTipo(): String
+  + setTipo(tipo: String): void
+  + toString(): String
+}
+class dominio.Piloto {
+  - nombre: String
+  - edad: int
+  + toString(): String
+}
+class interfaz.Menu {
+  + escuderias: List
+  + mostrarMenu(): void
+  - crearEscuderia(): void
+  - mostrarEscuderias(): void
+  - cargarDatos(): void
+  - guardarDatos(): void
+  - eliminarEscuderia(nombre: String): void
+}
+
+
+!theme blueprint
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class dominio.Coche
+class dominio.Escuderia
+class dominio.Motor
+class dominio.Neumaticos
+class dominio.Piloto
+class interfaz.Menu
+class java.util.ArrayList
+class java.util.List
+class java.util.Scanner
+class main.Main
+interface java.io.Serializable
+dominio.Coche ..> java.lang.Override
+dominio.Coche --|> java.io.Serializable
+dominio.Escuderia ..> java.lang.Override
+dominio.Escuderia ..> java.util.ArrayList
+dominio.Escuderia ..> java.util.List
+dominio.Escuderia --|> java.io.Serializable
+dominio.Motor ..> java.lang.Override
+dominio.Motor --|> java.io.Serializable
+dominio.Neumaticos ..> java.lang.Override
+dominio.Neumaticos --|> dominio.Escuderia
+dominio.Piloto ..> java.lang.Override
+dominio.Piloto --|> java.io.Serializable
+interfaz.Menu ..> java.lang.SuppressWarnings
+interfaz.Menu ..> java.util.ArrayList
+interfaz.Menu ..> java.util.List
+interfaz.Menu ..> java.util.Scanner
+main.Main ..> interfaz.Menu
+@enduml
