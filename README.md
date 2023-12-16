@@ -35,7 +35,6 @@ El proyecto utiliza un Makefile para automatizar tareas comunes. Algunos objetiv
 - `make runjar`: Ejecuta la aplicación utilizando el archivo JAR generado.
 - `make completo`: Realiza una compilación completa, generación de Javadoc, creación de JAR y ejecución de la aplicación.
 
-Personaliza el Makefile según la estructura y requisitos de tu proyecto.
 
 ### Instrucciones de Ejecución
 
