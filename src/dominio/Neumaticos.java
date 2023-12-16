@@ -42,9 +42,7 @@ public class Neumaticos extends Escuderia {
      */
     @Override
     public String toString() {
-        return "Neumaticos{" +
-                "tipo='" + tipo + '\'' +
-                ", escuderia='" + super.toString() + '\'' +
-                '}';
+        return "Tipo de neumático =  " + tipo +
+                '.';
     }
 }

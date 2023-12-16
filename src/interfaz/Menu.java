@@ -4,14 +4,14 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 import dominio.*;
+
 
 /**
  * Clase que gestiona el menú y la interacción con el usuario.
  */
 public class Menu {
-    private List<Escuderia> escuderias;
+    public List<Escuderia> escuderias;
 
     /**
      * Constructor que inicializa la lista de escuderías y carga los datos si existen.
@@ -73,7 +73,8 @@ public void mostrarMenu() {
     /**
      * Permite al usuario crear una nueva escudería, ingresando información sobre pilotos, coches, motores y neumáticos.
      */
-    private void crearEscuderia() {
+    private void crearEscuderia() 
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el nombre de la escudería: ");
         String nombre = scanner.nextLine();
@@ -122,7 +123,8 @@ public void mostrarMenu() {
 
         escuderias.add(escuderia);
 
-        System.out.println("Escudería creada con éxito.");
+        System.out.println("Escudería creada con éxito. ");
+        
     }
 
     /**

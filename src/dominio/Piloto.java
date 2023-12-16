@@ -27,9 +27,8 @@ public class Piloto implements Serializable {
      */
     @Override
     public String toString() {
-        return "Piloto{" +
-                "nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                '}';
+        return "Nombre del Piloto - " + nombre + 
+                ", Edad = " + edad +
+                '.';
     }
 }

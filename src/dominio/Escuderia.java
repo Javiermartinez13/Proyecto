@@ -45,7 +45,8 @@ public class Escuderia implements Serializable {
      *
      * @param coche Coche a agregar.
      */
-    public void agregarCoche(Coche coche) {
+    public void agregarCoche(Coche coche) 
+    {
         coches.add(coche);
     }
 
@@ -54,7 +55,8 @@ public class Escuderia implements Serializable {
      *
      * @param motor Motor a agregar.
      */
-    public void agregarMotor(Motor motor) {
+    public void agregarMotor(Motor motor) 
+    {
         motores.add(motor);
     }
 
@@ -63,7 +65,8 @@ public class Escuderia implements Serializable {
      *
      * @return Lista de pilotos.
      */
-    public List<Piloto> getPilotos() {
+    public List<Piloto> getPilotos() 
+    {
         return pilotos;
     }
 
@@ -72,7 +75,8 @@ public class Escuderia implements Serializable {
      *
      * @return Lista de coches.
      */
-    public List<Coche> getCoches() {
+    public List<Coche> getCoches() 
+    {
         return coches;
     }
 
@@ -81,7 +85,8 @@ public class Escuderia implements Serializable {
      *
      * @return Lista de motores.
      */
-    public List<Motor> getMotores() {
+    public List<Motor> getMotores() 
+    {
         return motores;
     }
 
@@ -90,7 +95,8 @@ public class Escuderia implements Serializable {
      *
      * @param neumatico Neumático a agregar.
      */
-    public void agregarNeumatico(Neumaticos neumatico) {
+    public void agregarNeumatico(Neumaticos neumatico) 
+    {
         neumaticos.add(neumatico);
     }
 
@@ -99,7 +105,8 @@ public class Escuderia implements Serializable {
      *
      * @return Lista de neumáticos.
      */
-    public List<Neumaticos> getNeumaticos() {
+    public List<Neumaticos> getNeumaticos()
+    {
         return neumaticos;
     }
     /**
@@ -108,12 +115,12 @@ public class Escuderia implements Serializable {
      * @return Cadena que representa la escudería.
      */
     @Override
-    public String toString() {
-        return "Escuderia{" +
-                "nombre='" + nombre + '\'' +
-                ", pilotos=" + pilotos +
-                ", coches=" + coches +
-                ", motores=" + motores +
-                '}';
+    public String toString() 
+    {
+        return "Nombre de la Escudería - " + nombre +  
+                ", Pilotos = " + pilotos +
+                ", Coches = " + coches +
+                ", Motores = " + motores +
+                ", Neumáticos = " + neumaticos ;
     }
 }

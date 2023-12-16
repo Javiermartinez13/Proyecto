@@ -24,8 +24,7 @@ public class Motor implements Serializable {
      */
     @Override
     public String toString() {
-        return "Motor{" +
-                "fabricante='" + fabricante + '\'' +
-                '}';
+        return "Motor del fabricante = " + fabricante +
+                '.';
     }
 }

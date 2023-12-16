@@ -28,9 +28,9 @@ public class Coche implements Serializable {
      */
     @Override
     public String toString() {
-        return "Coche{" +
-                "modelo='" + modelo + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return "Modelo del coche = " +
+                modelo + 
+                ", Color = " + color + 
+                '.';
     }
 }
