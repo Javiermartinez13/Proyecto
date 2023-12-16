@@ -1,4 +1,3 @@
-
 F1 Team Manager
 Descripción
 Bienvenido al F1 Team Manager, una aplicación simple de gestión de escuderías de Fórmula 1. Esta aplicación te permite crear y administrar escuderías, agregar pilotos, coches, motores y neumáticos, así como visualizar y eliminar escuderías. A continuación, encontrarás información importante para usuarios y desarrolladores.
