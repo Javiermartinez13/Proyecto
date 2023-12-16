@@ -45,6 +45,7 @@ Personaliza el Makefile según la estructura y requisitos de tu proyecto.
 4. Ejecuta `make runjar` para ejecutar la aplicación utilizando el archivo JAR generado.
 
 ### UML
+![DiagramaUML](https://github.com/Javiermartinez13/Proyecto/assets/119308526/2f95418b-e79d-4c06-bb91-be45dff34184)
 
 Los diagramas UML que visualiza en este programa se generan automáticamente a partir de los archivos .java y no han sido revisados manualmente. Por lo tanto, tenga en cuenta lo siguiente:
 
